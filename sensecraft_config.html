@@ -2492,18 +2492,6 @@
             index = parseInt(index)
             addNewFlowsFn(jsonData[index])
         });
-
-        RED.events.on("flows:add", function(newFlow) {
-            console.log(newFlow, 'add')
-        });
-
-        RED.events.on("flows:change", function(newFlow) {
-            console.log(newFlow, 'change')
-        });
-
-        RED.events.on("flows:reorder", function(newFlow) {
-            console.log(newFlow, 'reorder')
-        });
         
     })();
 </script>
