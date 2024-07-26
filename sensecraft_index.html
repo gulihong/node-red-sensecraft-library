@@ -1,0 +1,18 @@
+
+<script type="text/javascript">
+(function ($) {
+    RED.nodes.registerType('sensecraft_index', {
+        category: 'config',
+        hasUsers: false,
+        defaults: {
+            name: { value: "SenseCraft Devices" },
+            algorithm: { value: "sensecraft_device" },
+            settings: { value: {} }
+        },
+        paletteLabel: 'sensecraftIndex',
+        label: function () {
+            return this.name;
+        }
+    });
+})(jQuery);
+</script>

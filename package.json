@@ -1,0 +1,32 @@
+{
+    "name": "node-red-sensecraft-library",
+    "version": "0.0.1",
+    "description": "node-red-sensecraft-library",
+    "author": {
+        "name": "GuLiHong"
+    },
+    "keywords": ["node-red", "sensecraft"],
+    "bugs": {
+        "url": "https://github.com/gulihong/node-red-sensecraft-library/issues"
+    },
+    "homepage": "https://sensecraft.seeed.cc/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gulihong/node-red-sensecraft-library.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "node-red": {
+        "version": ">=2.0.0",
+        "nodes": {
+            "sensecraft_index": "sensecraft_index.js"
+        },
+        "plugins": {
+          "sensecraft-config": "sensecraft_config.html"
+        }
+    }
+}
