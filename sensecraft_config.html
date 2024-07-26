@@ -2418,7 +2418,7 @@
         }
 
         function refreshList() {
-            fetch('/flows', {
+            fetch('/flows?_=' + new Date().getTime(), {
                 method: 'GET',
                 headers: {
                     'Node-Red-Api-Version': 'v2',
@@ -2505,18 +2505,18 @@
         });
 
         // 监听flows删除事件
-        // RED.events.on("flows:remove", function (res) {
-        //     if (res && res.id) {
-        //         let arr = [];
-        //         for (let i = 0; i < currentFlows.length; i++) {
-        //             if (currentFlows[i].id != res.id && currentFlows[i].z != res.id) arr.push(currentFlows[i])
-        //         }
-        //         currentFlows = null;
-        //         currentFlows = arr
-        //         delete arr;
-        //         postFlows(currentFlows);
-        //     }
-        // })
+        RED.events.on("flows:remove", function (res) {
+            if (res && res.id) {
+                let arr = [];
+                for (let i = 0; i < currentFlows.length; i++) {
+                    if (currentFlows[i].id != res.id && currentFlows[i].z != res.id) arr.push(currentFlows[i])
+                }
+                currentFlows = null;
+                currentFlows = arr
+                delete arr;
+                postFlows(currentFlows);
+            }
+        })
         
     })();
 </script>
