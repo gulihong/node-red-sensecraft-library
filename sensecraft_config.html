@@ -2437,12 +2437,12 @@
 
         async function addNewFlowsFn(data) {
             // 判断是否添加过
-            const flowId = data.data[0].id;
-            for (let i = 0; i < currentFlows.length; i++) {
-                if (currentFlows[i].id == flowId || currentFlows[i].z == flowId) {
-                    return RED.notify('You have added the current flow')
-                }
-            }
+            // const flowId = data.data[0].id;
+            // for (let i = 0; i < currentFlows.length; i++) {
+            //     if (currentFlows[i].id == flowId || currentFlows[i].z == flowId) {
+            //         return RED.notify('You have added the current flow')
+            //     }
+            // }
             let flowsArr = JSON.parse(JSON.stringify(currentFlows));
             console.log(currentFlows, 'currentFlows')
             flowsArr = await flowsArr.concat(data.data);
