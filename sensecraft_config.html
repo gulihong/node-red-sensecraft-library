@@ -2436,26 +2436,36 @@
         }
 
         async function addNewFlowsFn(data) {
-            await refreshList();
+            // 判断是否添加过
+            const flowId = data.data[0].id;
+            for (let i = 0; i < currentFlows.length; i++) {
+                if (currentFlows[i].id == flowId || currentFlows[i].z == flowId) {
+                    return RED.notify('You have added the current flow')
+                }
+            }
             let flowsArr = JSON.parse(JSON.stringify(currentFlows));
             console.log(currentFlows, 'currentFlows')
             flowsArr = await flowsArr.concat(data.data);
             flowsArr = await uniqueFunc(flowsArr, 'id');
-            fetch('/' + data.type, {
+            postFlows(flowsArr);
+        }
+
+        function postFlows(flowsArr) {
+            fetch('/flows', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Node-RED-Deployment-Type': data.type,
+                    'Node-RED-Deployment-Type': 'flows',
                     'Node-Red-Api-Version': 'v2',
                 },
                 body: JSON.stringify({
-                    [data.type]: flowsArr,
+                    flows: flowsArr,
                 })
             }).then(response => response.json())
                 .then(data => {
                     if (data.rev) {
-                        refreshList();
                         RED.actions.invoke('core:refresh');
+                        refreshList();
                     }
                     console.log(data)
                 }).catch(err => {
@@ -2486,12 +2496,27 @@
             $("#sensecraft-list-box").append(`<div style="border: 1px dashed #000; font-size: 16px; margin: 10px 0;background: #fff; line-height: 50px; cursor: pointer;" id="sensecraft-data-${i}" class="sensecraft-data-item">${jsonData[i].name}</div>`);
         }
 
+        // 选中flows
         $(".sensecraft-data-item").click(function () {
             let index = $(this)[0].id;
             index = index.replace('sensecraft-data-', '')
             index = parseInt(index)
             addNewFlowsFn(jsonData[index])
         });
+
+        // 监听flows删除事件
+        // RED.events.on("flows:remove", function (res) {
+        //     if (res && res.id) {
+        //         let arr = [];
+        //         for (let i = 0; i < currentFlows.length; i++) {
+        //             if (currentFlows[i].id != res.id && currentFlows[i].z != res.id) arr.push(currentFlows[i])
+        //         }
+        //         currentFlows = null;
+        //         currentFlows = arr
+        //         delete arr;
+        //         postFlows(currentFlows);
+        //     }
+        // })
         
     })();
 </script>
