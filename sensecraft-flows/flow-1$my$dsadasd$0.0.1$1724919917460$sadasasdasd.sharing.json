@@ -1,0 +1,307 @@
+[
+    {
+        "x": 174,
+        "y": 279,
+        "z": "c1f3b5f6b1c63a7f",
+        "type": "group",
+        "changed": false,
+        "id": "7a96fb7475fa0911",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "dc59da82044d4328",
+            "c9e55253d094d2b5",
+            "76def5baa37164ab",
+            "2560167c8dc0441b",
+            "20cd437d4590d91b",
+            "d7699f106ddecc65"
+        ],
+        "w": 732,
+        "h": 202,
+        "_index": 0,
+        "_order": 0,
+        "minWidth": 40,
+        "selected": true
+    },
+    {
+        "x": 270,
+        "y": 440,
+        "z": "c1f3b5f6b1c63a7f",
+        "type": "inject",
+        "changed": false,
+        "_config": {
+            "name": "\"\"",
+            "props": "[{\"p\":\"payload\"}]",
+            "repeat": "\"\"",
+            "crontab": "\"\"",
+            "once": "false",
+            "onceDelay": "0.1",
+            "topic": "\"\"",
+            "payload": "\"true\"",
+            "payloadType": "\"bool\"",
+            "x": 270,
+            "y": 440
+        },
+        "g": "7a96fb7475fa0911",
+        "id": "c9e55253d094d2b5",
+        "_def": {
+            "category": "common",
+            "color": "#a6bbcf",
+            "defaults": {
+                "name": {
+                    "value": ""
+                },
+                "props": {
+                    "value": [
+                        {
+                            "p": "payload"
+                        },
+                        {
+                            "p": "topic",
+                            "vt": "str"
+                        }
+                    ]
+                },
+                "repeat": {
+                    "value": ""
+                },
+                "crontab": {
+                    "value": ""
+                },
+                "once": {
+                    "value": false
+                },
+                "onceDelay": {
+                    "value": 0.1
+                },
+                "topic": {
+                    "value": ""
+                },
+                "payload": {
+                    "value": ""
+                },
+                "payloadType": {
+                    "value": "date"
+                }
+            },
+            "icon": "inject.svg",
+            "inputs": 0,
+            "outputs": 1,
+            "button": {},
+            "set": {
+                "id": "node-red/inject",
+                "name": "inject",
+                "types": [
+                    "inject"
+                ],
+                "enabled": true,
+                "local": false,
+                "user": false,
+                "module": "node-red",
+                "version": "4.0.1",
+                "added": true
+            },
+            "type": "inject"
+        },
+        "inputs": 0,
+        "outputs": 1,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "dirty": false,
+        "valid": true,
+        "validationErrors": [],
+        "_index": 2,
+        "h": 30,
+        "resize": false,
+        "w": 100,
+        "selected": true,
+        "wires": [
+            [
+                "2560167c8dc0441b"
+            ]
+        ]
+    },
+    {
+        "x": 760,
+        "y": 440,
+        "z": "c1f3b5f6b1c63a7f",
+        "type": "debug",
+        "changed": false,
+        "_config": {
+            "name": "\"debug 65\"",
+            "active": "false",
+            "tosidebar": "true",
+            "console": "false",
+            "tostatus": "false",
+            "complete": "\"false\"",
+            "statusVal": "\"\"",
+            "statusType": "\"auto\"",
+            "x": 760,
+            "y": 440
+        },
+        "g": "7a96fb7475fa0911",
+        "id": "76def5baa37164ab",
+        "_def": {
+            "category": "common",
+            "defaults": {
+                "name": {
+                    "value": "_DEFAULT_"
+                },
+                "active": {
+                    "value": true
+                },
+                "tosidebar": {
+                    "value": true
+                },
+                "console": {
+                    "value": false
+                },
+                "tostatus": {
+                    "value": false
+                },
+                "complete": {
+                    "value": "false",
+                    "required": true
+                },
+                "targetType": {},
+                "statusVal": {
+                    "value": ""
+                },
+                "statusType": {
+                    "value": "auto"
+                }
+            },
+            "color": "#87a980",
+            "inputs": 1,
+            "outputs": 0,
+            "icon": "debug.svg",
+            "align": "right",
+            "button": {
+                "toggle": "active"
+            },
+            "set": {
+                "id": "node-red/debug",
+                "name": "debug",
+                "types": [
+                    "debug"
+                ],
+                "enabled": true,
+                "local": false,
+                "user": false,
+                "module": "node-red",
+                "version": "4.0.1",
+                "added": true
+            },
+            "type": "debug"
+        },
+        "inputs": 1,
+        "outputs": 0,
+        "name": "debug 65",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "dirty": false,
+        "valid": true,
+        "validationErrors": [],
+        "_index": 3,
+        "h": 30,
+        "resize": false,
+        "w": 120,
+        "selected": true,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "x": 500,
+        "y": 440,
+        "z": "c1f3b5f6b1c63a7f",
+        "type": "subflow:69cfd2a5356a65cd",
+        "_config": {},
+        "g": "7a96fb7475fa0911",
+        "id": "2560167c8dc0441b",
+        "_def": {
+            "defaults": {
+                "name": {
+                    "value": ""
+                },
+                "env": {
+                    "value": []
+                }
+            },
+            "category": "RS485 Light Controller",
+            "inputs": 1,
+            "outputs": 1,
+            "color": "#E9967A",
+            "set": {
+                "module": "node-red"
+            },
+            "type": "subflow:69cfd2a5356a65cd"
+        },
+        "name": "",
+        "outputs": 1,
+        "inputs": 1,
+        "env": [
+            {
+                "name": "LIGHT_COLOR",
+                "value": "red",
+                "type": "str"
+            },
+            {
+                "name": "LIGHT_MODE",
+                "value": "off",
+                "type": "str"
+            }
+        ],
+        "dirty": false,
+        "valid": true,
+        "validationErrors": [],
+        "_index": 4,
+        "h": 30,
+        "resize": false,
+        "w": 180,
+        "selected": true,
+        "wires": [
+            [
+                "76def5baa37164ab"
+            ]
+        ]
+    },
+    {
+        "id": "ff55500100010001",
+        "type": "comment",
+        "name": "",
+        "info": "",
+        "_sensecraft_config": {
+            "name": "dsadasd",
+            "desc": "sadasasdasd",
+            "time": 1724919917460,
+            "type": "1",
+            "author": "my",
+            "version": "0.0.1",
+            "introduction": ""
+        }
+    }
+]
