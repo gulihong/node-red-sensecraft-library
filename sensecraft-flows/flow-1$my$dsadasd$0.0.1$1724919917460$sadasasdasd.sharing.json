@@ -301,7 +301,7 @@
             "type": "1",
             "author": "my",
             "version": "0.0.1",
-            "introduction": ""
+            "introduction": "<!DOCTYPE html><html><head><title>富文本示例</title></head><body><h1>这是一个标题</h1><p>这是一个段落，包含一些示例文本。</p><p>下面是一个base64编码的图片：</p><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNe5dAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxglj4AAAB9SURBVBjTY2xg7P0/N8Q+5H/wE9gEZG/xI/1F2DZ2QBrsQbw2TwA2yIMBgABzJcJ/YPsHTQAAAABJRU5ErkJggg==\" alt=\"Base64 Image\" /><p>以上是base64图片的示例。</p></body></html>"
         }
     }
 ]
